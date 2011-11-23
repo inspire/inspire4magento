@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <payment>
+      <groups>
+        <uscim translate="label" module="paygate">
+          <label>InspireGateway</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>0</show_in_store>
+          <fields>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </active>
+            <cctypes translate="label">
+              <label>Credit Card Types</label>
+              <frontend_type>multiselect</frontend_type>
+              <source_model>uscim/uscim_source_cctype</source_model>
+              <sort_order>15</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </cctypes>
+            <useccv translate="label">
+              <label>Credit Card Verification</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>16</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </useccv>
+            <email_customer translate="label">
+              <label>Email customer</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </email_customer>
+            <order_status translate="label">
+              <label>New order status</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_order_status_processing</source_model>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </order_status>
+            <sort_order translate="label">
+              <label>Sort order</label>
+              <frontend_type>text</frontend_type>    
+              <sort_order>100</sort_order>         
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </sort_order>
+            <test translate="label">            
+              <label>Test mode</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>7</sort_order>           
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </test>
+<!--
+            <debug translate="label">           
+              <label>Debug</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>8</sort_order>         
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </debug>
+-->
+            <title translate="label">           
+              <label>Title</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>2</sort_order>     
+              <show_in_default>1</show_in_default> 
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </title>
+            <username translate="label">
+              <label>Username</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </username>
+            <password translate="label">
+              <label>Password</label>
+              <frontend_type>password</frontend_type>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </password>
+            <payment_action translate="label">      
+              <label>Payment Action</label>
+              <frontend_type>select</frontend_type>
+              <source_model>uscim/uscim_source_paymentAction</source_model>
+              <sort_order>2</sort_order>             
+              <show_in_default>1</show_in_default> 
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </payment_action>
+            <cgi_url>    
+              <label>Gateway URL</label>      
+              <frontend_type>text</frontend_type>
+              <sort_order>6</sort_order>           
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </cgi_url>
+            <query_url>    
+              <label>Vault Query URL</label>      
+              <frontend_type>text</frontend_type>
+              <sort_order>7</sort_order>           
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>    
+            </query_url>
+            <allowspecific translate="label">   
+              <label>Payment from applicable countries</label>
+              <frontend_type>allowspecific</frontend_type>
+              <sort_order>50</sort_order>
+              <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>    
+            </allowspecific>
+            <specificcountry translate="label">     
+              <label>Payment from Specific countries</label>
+              <frontend_type>multiselect</frontend_type>
+              <sort_order>51</sort_order>
+              <source_model>adminhtml/system_config_source_country</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website> 
+              <show_in_store>1</show_in_store>    
+            </specificcountry>                      
+            <min_order_total>
+              <label>Minimum Order Total</label>  
+              <frontend_type>text</frontend_type>
+              <sort_order>98</sort_order>        
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website> 
+              <show_in_store>0</show_in_store>    
+            </min_order_total>
+            <max_order_total>
+              <label>Maximum Order Total</label>
+              <frontend_type>text</frontend_type> 
+              <sort_order>99</sort_order>  
+              <show_in_default>1</show_in_default> 
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>       
+            </max_order_total>
+          </fields>            
+        </uscim>         
+      </groups>
+    </payment>
+  </sections>
+</config>

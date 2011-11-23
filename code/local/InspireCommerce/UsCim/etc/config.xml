@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <InspireCommerce_UsCim>
+            <version>0.1.0</version>
+        </InspireCommerce_UsCim>
+    </modules>
+    <global>
+        <blocks>
+            <uscim>
+                <class>InspireCommerce_UsCim_Block</class>
+            </uscim>
+
+            <payment>
+                <rewrite>
+                    <form_inspiregateway>InspireCommerce_UsCim_Block_Form_Inspiregateway</form_inspiregateway>
+                    <info_inspiregateway>InspireCommerce_UsCim_Block_Info_Inspiregateway</info_inspiregateway>
+                </rewrite>
+            </payment>
+        </blocks>
+
+        <helpers>
+            <UsCim>
+                <class>InspireCommerce_UsCim_Helper</class>
+            </UsCim>
+        </helpers>
+        <models>
+            <uscim>
+                <class>InspireCommerce_UsCim_Model</class>
+                <resourceModel>uscim_mysql4</resourceModel>
+            </uscim>
+            <uscim_mysql4>
+                <class>InspireCommerce_UsCim_Model_Mysql4</class>
+<!--
+        <entities>
+          <uscim_debug><table>uscim_debug</table></uscim_debug>
+        </entities>
+-->
+            </uscim_mysql4>
+        </models>
+        <resources>
+            <uscim_setup>
+                <setup>
+                    <module>InspireCommerce_UsCim</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </uscim_setup>
+            <uscim_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </uscim_write>
+            <uscim_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </uscim_read>
+        </resources>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <InspireCommerce_UsCim>
+                    <files>
+                        <default>InspireCommerce_UsCim.csv</default>
+                    </files>
+                </InspireCommerce_UsCim>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <frontend>
+        <translate>
+            <modules>
+                <InspireCommerce_UsCim>
+                    <files>
+                        <default>InspireCommerce_UsCim.csv</default>
+                    </files>
+                </InspireCommerce_UsCim>
+            </modules>
+        </translate>
+    </frontend>
+
+    <default>
+        <payment>
+            <uscim>
+                <active>0</active>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <cgi_url>https://secure.inspiregateway.net/api/transact.php</cgi_url>
+                <query_url>https://secure.inspiregateway.net/api/query.php</query_url>
+                <debug>0</debug>
+                <email_customer>0</email_customer>
+                <login backend_model="adminhtml/system_config_backend_encrypted"/>
+                <merchant_email></merchant_email>
+                <model>uscim/uscim</model>
+                <order_status>processing</order_status>
+                <payment_action>authorize</payment_action>
+                <test>1</test>
+                <title>Credit Card (InspireGateway)</title>
+                <trans_key backend_model="adminhtml/system_config_backend_encrypted"/>
+                <allowspecific>0</allowspecific>
+            </uscim>
+        </payment>
+    </default>
+</config>

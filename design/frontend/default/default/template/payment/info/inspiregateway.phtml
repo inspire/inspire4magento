@@ -1,0 +1,3 @@
+<?php echo $this->__('Name on the Card: %s', $this->htmlEscape($this->getInfo()->getCcOwner())) ?><br />
+<?php echo $this->__('Credit Card Type: %s', $this->htmlEscape($this->getCcTypeName())) ?><br />
+<?php echo $this->__('Credit Card Number: xxxx-%s', $this->htmlEscape($this->getInfo()->getCcLast4())) ?>

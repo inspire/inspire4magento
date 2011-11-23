@@ -1,0 +1,13 @@
+This is version 1.0 of the Inspire Commerce Gateway module for Magento.  
+
+Requirements:
+
+     * SSL Certificate ( For Secure On Site Checkout ).
+     * Inspire Commerce Gateway Account ( Developer and Merchant Accounts Available at http://www.inspirecommerce.com ).
+
+Features include:
+
+     * Easily accept payments via Magento based shopping cart.
+     * Credit Memo support.
+     * Customer vault support for storing credit cards via the Inspire Commerce Gateway (optional).
+     * Developer backed processing gateway with expert developer support.
